@@ -1,0 +1,114 @@
+🔹 What is Redux?
+English
+
+Redux is a state management library for JavaScript apps (mostly used with React, but can be used with others too).
+It helps you manage and share data (state) across your application in a predictable way.
+
+Instead of passing props through many components (prop drilling), Redux keeps all data in a central store so that any component can access it easily.
+
+বাংলা
+
+Redux হলো একটি state management লাইব্রেরি যা মূলত React এর সাথে ব্যবহার করা হয় (তবে অন্য জাভাস্ক্রিপ্ট অ্যাপেও ব্যবহার করা যায়)।
+এটি আপনার অ্যাপের ডেটা বা স্টেট এক জায়গায় (store) রাখে, যাতে প্রতিটি কম্পোনেন্ট সহজেই সেই ডেটা ব্যবহার করতে পারে, প্রপস এদিক-সেদিক পাঠাতে না হয়।
+
+🔹 Why is Redux used?
+English
+
+Centralized Store → All state is kept in one place.
+
+Easy Data Sharing → Any component can access the state.
+
+Predictable → State changes in a consistent way.
+
+Debugging → Redux DevTools help track state history.
+
+বাংলা
+
+এক জায়গায় (store) সব স্টেট রাখা যায়
+
+সহজে ডেটা শেয়ার করা যায়
+
+স্টেট পরিবর্তন সবসময় একইভাবে হয় (predictable)
+
+ডিবাগ করা সহজ, history দেখা যায়
+
+🔹 How Redux Works (Concept)
+
+Redux has three main parts:
+
+Store → Central place where all data is kept
+
+Actions → Describe what happened (like “Add to Cart”)
+
+Reducers → Tell how the state should change
+
+Flow:
+👉 UI (button click) → Dispatch Action → Reducer updates state → Store updates → UI re-renders
+
+🔹 Real-Life Example
+English
+
+Think of a Bank Account System:
+
+Store = The Bank (where your money is kept).
+
+Action = "Deposit 100" or "Withdraw 50".
+
+Reducer = Bank clerk who updates your balance based on action.
+
+UI = Your mobile app showing updated balance.
+
+বাংলা
+
+ভাবুন একটি ব্যাংক অ্যাকাউন্ট সিস্টেম:
+
+Store = ব্যাংক (যেখানে টাকা রাখা হয়)
+
+Action = "১০০ টাকা জমা দাও" বা "৫০ টাকা তুলো"
+
+Reducer = ব্যাংকের কর্মচারী, যিনি action দেখে balance আপডেট করেন
+
+UI = আপনার মোবাইল অ্যাপে আপডেট হওয়া ব্যালেন্স দেখা যায়
+
+🔹 Code Example (Counter App)
+// 1. Import Redux
+import { createStore } from "redux";
+
+// 2. Reducer function (how state changes)
+const counterReducer = (state = { count: 0 }, action) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return { count: state.count + 1 };
+    case "DECREMENT":
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+};
+
+// 3. Create Store
+const store = createStore(counterReducer);
+
+// 4. Subscribe (listen to changes)
+store.subscribe(() => {
+  console.log("Current State:", store.getState());
+});
+
+// 5. Dispatch Actions (like clicking buttons)
+store.dispatch({ type: "INCREMENT" }); // count: 1
+store.dispatch({ type: "INCREMENT" }); // count: 2
+store.dispatch({ type: "DECREMENT" }); // count: 1
+
+
+👉 Here:
+
+Store = Keeps count
+
+Action = { type: "INCREMENT" } or { type: "DECREMENT" }
+
+Reducer = Decides how to update the count
+
+UI = Console log (in real React app, it would re-render UI)
+
+✅ So, Redux is like a big warehouse (store) where all your app’s data is kept,
+and workers (reducers) update it when you give them instructions (actions).
