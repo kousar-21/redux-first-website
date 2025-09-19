@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../../component/Navbar/Navbar';
 import Footer from '../../component/Footer/Footer';
 import FeaturesSection from '../../component/FeaturesSection/FeaturesSection';
+import TestimonialsSection from '../../component/TestimonialsSection/TestimonialsSection';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
                 <Navbar></Navbar>
             </div>
             <FeaturesSection></FeaturesSection>
+            <TestimonialsSection></TestimonialsSection>
             <div className='bg-gray-700'>
                 <Footer></Footer>
             </div>
