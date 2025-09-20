@@ -3,6 +3,7 @@ import Navbar from '../../component/Navbar/Navbar';
 import Footer from '../../component/Footer/Footer';
 import FeaturesSection from '../../component/FeaturesSection/FeaturesSection';
 import TestimonialsSection from '../../component/TestimonialsSection/TestimonialsSection';
+import ContactSection from '../../component/ContactSection/ContactSection';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             </div>
             <FeaturesSection></FeaturesSection>
             <TestimonialsSection></TestimonialsSection>
+            <ContactSection></ContactSection>
             <div className='bg-gray-700'>
                 <Footer></Footer>
             </div>
