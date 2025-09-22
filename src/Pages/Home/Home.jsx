@@ -6,6 +6,7 @@ import TestimonialsSection from '../../component/TestimonialsSection/Testimonial
 import ContactSection from '../../component/ContactSection/ContactSection';
 import AboutSection from '../../component/AboutSection/AboutSection';
 import CtaSection from '../../component/CtaSection/CtaSection';
+import PricingSection from '../../component/PricingSection/PricingSection';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <AboutSection></AboutSection>
             <ContactSection></ContactSection>
             <CtaSection></CtaSection>
+            <PricingSection></PricingSection>
             <div className='bg-gray-700'>
                 <Footer></Footer>
             </div>
