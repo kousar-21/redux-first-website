@@ -7,6 +7,7 @@ import ContactSection from '../../component/ContactSection/ContactSection';
 import AboutSection from '../../component/AboutSection/AboutSection';
 import CtaSection from '../../component/CtaSection/CtaSection';
 import PricingSection from '../../component/PricingSection/PricingSection';
+import TeamSection from '../../component/TeamSection/TeamSection';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <ContactSection></ContactSection>
             <CtaSection></CtaSection>
             <PricingSection></PricingSection>
+            <TeamSection></TeamSection>
             <div className='bg-gray-700'>
                 <Footer></Footer>
             </div>
