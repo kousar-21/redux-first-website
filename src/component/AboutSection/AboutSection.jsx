@@ -1,9 +1,10 @@
 import React from 'react';
+import PartnersSection from '../PartnersSection/PartnersSection';
 
 const AboutSection = () => {
     return (
         <div className="py-24 bg-base-200">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 mb-10">
                 <div className="flex flex-col lg:flex-row items-center gap-12">
                     <div className="lg:w-1/2">
                         <img
@@ -21,6 +22,8 @@ const AboutSection = () => {
                     </div>
                 </div>
             </div>
+
+            <PartnersSection></PartnersSection>
         </div>
     );
 };
